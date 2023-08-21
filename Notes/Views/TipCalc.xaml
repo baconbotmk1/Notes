@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Notes.Views.TipCalc"
+             Title="Tip Calculator!">
+    <VerticalStackLayout>
+        <Label 
+            Text="Waiter: Bob"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Entry x:Name="UserInput"
+               Placeholder="Enter amount"
+               Completed="UserInput_Completed"
+               Keyboard="Numeric"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"/>
+
+        <Label Text="Tip"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"/>
+        <Label x:Name="TipLabel"
+               Text="(uninitialized)"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"/>
+
+        <Label Text="Total"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"/>
+        <Label x:Name="TotalLabel" 
+               Text="(uninitialized)"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"/>
+
+        <Label x:Name="TipPercent"
+               Text="Tip percentage"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"/>
+        <Label x:Name="TipPercentLabel"
+               Text="(uninitialized)"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"/>
+
+        <Slider x:Name="MyTipSlider"
+                Minimum="0" 
+                Maximum="100" 
+                Value="15"
+                ValueChanged="OnSliderValueChanged"/>
+
+        <Button Text="15%"
+                Clicked="On15Clicked"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"/>
+        <Button Text="20%"
+                Clicked="On20Clicked"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"/>
+        <Button Text="Round Up"
+                Clicked="OnRoundUpClicked"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"/>
+        <Button Text="Round Down"
+                Clicked="OnRoundDownClicked"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"/>
+
+
+
+
+
+
+    </VerticalStackLayout>
+</ContentPage>

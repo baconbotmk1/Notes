@@ -16,6 +16,13 @@
             Title="About"
             ContentTemplate="{DataTemplate views:AboutPage}"
             Icon="{OnPlatform 'icon_about.png', iOS='icon_about_ios.png', MacCatalyst='icon_about_ios.png'}" />
+
+
+        <ShellContent
+            Title="Tips"
+            ContentTemplate="{DataTemplate views:TipCalc}"
+            Icon="{OnPlatform 'tips.png', iOS='tips.png', MacCatalyst='tips.png'}" />
+
     </TabBar>
 
 </Shell>
