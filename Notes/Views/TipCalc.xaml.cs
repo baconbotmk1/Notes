@@ -44,18 +44,22 @@ public partial class TipCalc : ContentPage
 
     private void RoundingUpdate(bool roundUp)
     {
-        var currTotal = TotalLabel.Text;
-        var currCost = UserInput.Text;
+        int af = 10; //Afrundingsfaktor
+
+        string currTotal = TotalLabel.Text;
+        string currCost = UserInput.Text;
         string currTotalTrimmed = currTotal.Replace(" kr.", string.Empty);
         double currTotalDbl = double.Parse(currTotalTrimmed.Replace(".", string.Empty).Replace(",", "."));
 
-        var total = roundUp ? Math.Ceiling(currTotalDbl / 10) * 10 :Math.Floor(currTotalDbl / 10) * 10;
-        var cost = double.Parse(currCost);
-        var tip = total - cost;
+        double total = roundUp ? Math.Ceiling(currTotalDbl / af) * af : Math.Floor(currTotalDbl / af) * af;
+        double cost = double.Parse(currCost);
+        double tip = total - cost;
+        double sliderValue = Math.Round((tip / cost) * 100, 2);
 
         TipLabel.Text = tip.ToString("C", CultureInfo.CreateSpecificCulture("da-DK"));
         TotalLabel.Text = total.ToString("C", CultureInfo.CreateSpecificCulture("da-DK"));
-        TipPercentLabel.Text = String.Format($"{(tip / cost) * 100}%");
+        TipPercentLabel.Text = String.Format($"{sliderValue}%");
+        MyTipSlider.Value = sliderValue;
     }
 
     private void UserInput_Changed(object sender, EventArgs e)
@@ -83,12 +87,12 @@ public partial class TipCalc : ContentPage
 
     private void UpdateTip(double cost, double tipPercentage)
     {
-        double tip = Math.Round(cost * (tipPercentage / 100),2);
+        double tip = Math.Round(cost * (tipPercentage / 100), 2);
         TipLabel.Text = tip.ToString("C", CultureInfo.CreateSpecificCulture("da-DK"));
     }
     private void UpdateTotal(double cost, double tipPercentage)
     {
-        double total = Math.Round(cost * ((tipPercentage / 100) + 1),2);
+        double total = Math.Round(cost * ((tipPercentage / 100) + 1), 2);
         TotalLabel.Text = total.ToString("C", CultureInfo.CreateSpecificCulture("da-DK"));
     }
 }

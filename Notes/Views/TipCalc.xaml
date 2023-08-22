@@ -3,61 +3,69 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Notes.Views.TipCalc"
              Title="Tip Calculator!">
-    <VerticalStackLayout>
-        <HorizontalStackLayout>
+    <VerticalStackLayout Spacing="40" Margin="40">
+        <HorizontalStackLayout Spacing="10">
             <Label 
             Text="Bill"
-            HorizontalOptions="Center" />
+            VerticalOptions="Center"
+                WidthRequest="100"/>
             <Entry x:Name="UserInput"
                Placeholder="Enter amount"
                TextChanged="UserInput_Changed"
-               Keyboard="Numeric"
-               HorizontalOptions="Center"/>
+               Keyboard="Numeric"/>
+            
         </HorizontalStackLayout>
-        <HorizontalStackLayout>
-            <Label Text="Tip"
-               HorizontalOptions="Center"/>
-            <Label x:Name="TipLabel"
+        <VerticalStackLayout Spacing="10">
+            <HorizontalStackLayout Spacing="10">
+                <Label Text="Tip"
+               HorizontalOptions="Center"
+                WidthRequest="100"/>
+                <Label x:Name="TipLabel"
                Text="(uninitialized)"
                HorizontalOptions="Center"/>
-        </HorizontalStackLayout>
+            </HorizontalStackLayout>
 
-        <HorizontalStackLayout>
-            <Label Text="Total"
-               HorizontalOptions="Center"/>
-            <Label x:Name="TotalLabel" 
+            <HorizontalStackLayout Spacing="10">
+                <Label Text="Total"
+               HorizontalOptions="Center"
+                WidthRequest="100"/>
+                <Label x:Name="TotalLabel" 
                Text="(uninitialized)"
                HorizontalOptions="Center"/>
-        </HorizontalStackLayout>
-        <HorizontalStackLayout>
-            <Label x:Name="TipPercent"
+            </HorizontalStackLayout>
+            <HorizontalStackLayout Spacing="10">
+                <Label x:Name="TipPercent"
                Text="Tip percentage"
-               HorizontalOptions="Center"/>
-            <Label x:Name="TipPercentLabel"
+               HorizontalOptions="Center"
+                WidthRequest="100"/>
+                <Label x:Name="TipPercentLabel"
                Text="(uninitialized)"
                HorizontalOptions="Center"/>
-        </HorizontalStackLayout>
+            </HorizontalStackLayout>
 
-        <Slider x:Name="MyTipSlider"
+            <Slider x:Name="MyTipSlider"
                 Minimum="0" 
                 Maximum="100" 
                 Value="15"
                 ValueChanged="OnSliderValueChanged"/>
-        <HorizontalStackLayout>
+        </VerticalStackLayout>
+        <HorizontalStackLayout VerticalOptions="Center" Spacing="10" HorizontalOptions="Center">
             <Button Text="15%"
                 Clicked="On15Clicked"
+                    WidthRequest="150"
                 HorizontalOptions="Center"/>
             <Button Text="20%"
                 Clicked="On20Clicked"
+                    WidthRequest="150"
                 HorizontalOptions="Center"/>
         </HorizontalStackLayout>
-        <HorizontalStackLayout>
+        <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
             <Button Text="Round Down"
-                Clicked="OnRoundDownClicked"
-                HorizontalOptions="Center"/>
+                    WidthRequest="150"
+                Clicked="OnRoundDownClicked"/>
             <Button Text="Round Up"
                 Clicked="OnRoundUpClicked"
-                HorizontalOptions="Center"/>
+                    WidthRequest="150"/>
         </HorizontalStackLayout>
     </VerticalStackLayout>
 </ContentPage>
