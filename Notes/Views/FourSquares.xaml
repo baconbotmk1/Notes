@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Notes.Views.FourSquares"
+             Title="FourSquares">
+    <Grid RowDefinitions="*,*" ColumnDefinitions="*,*">
+        <BoxView Grid.Column="0" Grid.Row="0" Color="Red" HeightRequest="100" WidthRequest="100" HorizontalOptions="Start" VerticalOptions="Start"/>
+        <BoxView Grid.Column="1" Grid.Row="0" Color="Green" HeightRequest="100" WidthRequest="100" HorizontalOptions="Center" VerticalOptions="Center"/>
+        <BoxView Grid.Column="0" Grid.Row="1" Color="Blue" HeightRequest="100" WidthRequest="100" HorizontalOptions="End" VerticalOptions="Start"/>
+        <BoxView Grid.Column="1" Grid.Row="1" Color="Yellow" HeightRequest="100" WidthRequest="100" HorizontalOptions="End" VerticalOptions="End"/>
+    </Grid>
+</ContentPage>
