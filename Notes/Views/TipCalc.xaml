@@ -4,59 +4,60 @@
              x:Class="Notes.Views.TipCalc"
              Title="Tip Calculator!">
     <VerticalStackLayout>
-        
-        <Label 
+        <HorizontalStackLayout>
+            <Label 
             Text="Bill"
             HorizontalOptions="Center" />
-        <Entry x:Name="UserInput"
+            <Entry x:Name="UserInput"
                Placeholder="Enter amount"
                TextChanged="UserInput_Changed"
                Keyboard="Numeric"
                HorizontalOptions="Center"/>
-
-        <Label Text="Tip"
+        </HorizontalStackLayout>
+        <HorizontalStackLayout>
+            <Label Text="Tip"
                HorizontalOptions="Center"/>
-        <Label x:Name="TipLabel"
+            <Label x:Name="TipLabel"
                Text="(uninitialized)"
                HorizontalOptions="Center"/>
+        </HorizontalStackLayout>
 
-        <Label Text="Total"
+        <HorizontalStackLayout>
+            <Label Text="Total"
                HorizontalOptions="Center"/>
-        <Label x:Name="TotalLabel" 
+            <Label x:Name="TotalLabel" 
                Text="(uninitialized)"
                HorizontalOptions="Center"/>
-
-        <Label x:Name="TipPercent"
+        </HorizontalStackLayout>
+        <HorizontalStackLayout>
+            <Label x:Name="TipPercent"
                Text="Tip percentage"
                HorizontalOptions="Center"/>
-        <Label x:Name="TipPercentLabel"
+            <Label x:Name="TipPercentLabel"
                Text="(uninitialized)"
                HorizontalOptions="Center"/>
+        </HorizontalStackLayout>
 
         <Slider x:Name="MyTipSlider"
                 Minimum="0" 
                 Maximum="100" 
                 Value="15"
                 ValueChanged="OnSliderValueChanged"/>
-
-        <Button Text="15%"
+        <HorizontalStackLayout>
+            <Button Text="15%"
                 Clicked="On15Clicked"
                 HorizontalOptions="Center"/>
-        <Button Text="20%"
+            <Button Text="20%"
                 Clicked="On20Clicked"
                 HorizontalOptions="Center"/>
-        
-        <Button Text="Round Down"
+        </HorizontalStackLayout>
+        <HorizontalStackLayout>
+            <Button Text="Round Down"
                 Clicked="OnRoundDownClicked"
                 HorizontalOptions="Center"/>
-        <Button Text="Round Up"
+            <Button Text="Round Up"
                 Clicked="OnRoundUpClicked"
                 HorizontalOptions="Center"/>
-
-
-
-
-
-
+        </HorizontalStackLayout>
     </VerticalStackLayout>
 </ContentPage>
