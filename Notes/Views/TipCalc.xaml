@@ -4,42 +4,34 @@
              x:Class="Notes.Views.TipCalc"
              Title="Tip Calculator!">
     <VerticalStackLayout>
+        
         <Label 
-            Text="Waiter: Bob"
-            VerticalOptions="Center" 
+            Text="Bill"
             HorizontalOptions="Center" />
-
         <Entry x:Name="UserInput"
                Placeholder="Enter amount"
-               Completed="UserInput_Completed"
+               TextChanged="UserInput_Changed"
                Keyboard="Numeric"
-               HorizontalOptions="Center"
-               VerticalOptions="Center"/>
+               HorizontalOptions="Center"/>
 
         <Label Text="Tip"
-               HorizontalOptions="Center"
-               VerticalOptions="Center"/>
+               HorizontalOptions="Center"/>
         <Label x:Name="TipLabel"
                Text="(uninitialized)"
-               HorizontalOptions="Center"
-               VerticalOptions="Center"/>
+               HorizontalOptions="Center"/>
 
         <Label Text="Total"
-               HorizontalOptions="Center"
-               VerticalOptions="Center"/>
+               HorizontalOptions="Center"/>
         <Label x:Name="TotalLabel" 
                Text="(uninitialized)"
-               HorizontalOptions="Center"
-               VerticalOptions="Center"/>
+               HorizontalOptions="Center"/>
 
         <Label x:Name="TipPercent"
                Text="Tip percentage"
-               HorizontalOptions="Center"
-               VerticalOptions="Center"/>
+               HorizontalOptions="Center"/>
         <Label x:Name="TipPercentLabel"
                Text="(uninitialized)"
-               HorizontalOptions="Center"
-               VerticalOptions="Center"/>
+               HorizontalOptions="Center"/>
 
         <Slider x:Name="MyTipSlider"
                 Minimum="0" 
@@ -49,20 +41,17 @@
 
         <Button Text="15%"
                 Clicked="On15Clicked"
-                HorizontalOptions="Center"
-                VerticalOptions="Center"/>
+                HorizontalOptions="Center"/>
         <Button Text="20%"
                 Clicked="On20Clicked"
-                HorizontalOptions="Center"
-                VerticalOptions="Center"/>
-        <Button Text="Round Up"
-                Clicked="OnRoundUpClicked"
-                HorizontalOptions="Center"
-                VerticalOptions="Center"/>
+                HorizontalOptions="Center"/>
+        
         <Button Text="Round Down"
                 Clicked="OnRoundDownClicked"
-                HorizontalOptions="Center"
-                VerticalOptions="Center"/>
+                HorizontalOptions="Center"/>
+        <Button Text="Round Up"
+                Clicked="OnRoundUpClicked"
+                HorizontalOptions="Center"/>
 
 
 
