@@ -14,15 +14,16 @@
         <Label Text="Total" HorizontalOptions="Center" WidthRequest="100" Grid.Column="0" Grid.Row="2"/>
         <Label x:Name="TotalLabel" Text="(uninitialized)" HorizontalOptions="Start" Grid.Column="1" Grid.Row="2"/>
 
-        <Label x:Name="TipPercent" Text="Tip percentage" HorizontalOptions="Start" WidthRequest="100" Grid.Column="0" Grid.Row="4"/>
-        <Label x:Name="TipPercentLabel" Text="(uninitialized)" HorizontalOptions="End" Grid.Column="1" Grid.Row="4"/>
+        <Label x:Name="TipPercent" Text="Tip percentage" HorizontalOptions="Start" WidthRequest="100" Grid.Column="0" Grid.Row="3" VerticalOptions="End"/>
+        <Label x:Name="TipPercentLabel" Text="(uninitialized)" HorizontalOptions="End" Grid.Column="1" Grid.Row="3" VerticalOptions="End"/>
 
-        <Slider x:Name="MyTipSlider" Minimum="0" Maximum="100" Value="15" ValueChanged="OnSliderValueChanged" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="5"/>
+        <Slider x:Name="MyTipSlider" Minimum="0" Maximum="100" Value="15" ValueChanged="OnSliderValueChanged" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="4"/>
 
-        <Button Text="15%" Clicked="On15Clicked" WidthRequest="150" Grid.Row="6" Grid.Column="0"/>
-        <Button Text="20%" Clicked="On20Clicked" WidthRequest="150" Grid.Row="6" Grid.Column="1"/>
-        <Button Text="Round Down" WidthRequest="150" Clicked="OnRoundDownClicked" Grid.Row="7" Grid.Column="0"/>
-        <Button Text="Round Up" Clicked="OnRoundUpClicked" WidthRequest="150" Grid.Row="7" Grid.Column="1"/>
+        <Button Text="15%" Clicked="On15Clicked" WidthRequest="150" Grid.Row="5" Grid.Column="0"/>
+        <Button Text="20%" Clicked="On20Clicked" WidthRequest="150" Grid.Row="5" Grid.Column="1"/>
+        <Button Text="Round Down" WidthRequest="150" Clicked="OnRoundDownClicked" Grid.Row="6" Grid.Column="0"/>
+        <Button Text="Round Up" Clicked="OnRoundUpClicked" WidthRequest="150" Grid.Row="6" Grid.Column="1"/>
+        <Button Text="Show LCY" Clicked="ShowLCYClicked" Grid.ColumnSpan="2" Grid.Row="7" Grid.Column="0" IsEnabled="False" x:Name="LCYBtn"/>
 
     </Grid>
 </ContentPage>

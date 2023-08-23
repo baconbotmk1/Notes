@@ -25,13 +25,21 @@ public partial class TipCalc : ContentPage
     }
 
 
-    void On15Clicked(object sender, EventArgs args)
+    async void On15Clicked(object sender, EventArgs args)
     {
         MyTipSlider.Value = 15;
+        await DisplayAlert("Normal tip", "You've selected normal tip... Cheapskate", "Ok");
     }
-    void On20Clicked(object sender, EventArgs args)
+    async void On20Clicked(object sender, EventArgs args)
     {
-        MyTipSlider.Value = 20;
+        double tip = Math.Round(double.Parse(UserInput.Text) * (Math.Round(MyTipSlider.Value, 0) / 100), 2);
+
+        bool answer = await DisplayAlert(tip < 100 ? "Cheapskate" : "Generous tip", tip < 100 ? "Waow.... Still a cheapskate... Wanna tip this?" : "Are you sure you want to tip this?", "Yes", "Si");
+
+        if (answer)
+        {
+            MyTipSlider.Value = 20;
+        }
     }
     void OnRoundUpClicked(object sender, EventArgs args)
     {
@@ -64,6 +72,14 @@ public partial class TipCalc : ContentPage
 
     private void UserInput_Changed(object sender, EventArgs e)
     {
+        if (UserInput.Text.Count() > 0)
+        {
+            LCYBtn.IsEnabled = true;
+        }
+        else
+        {
+            LCYBtn.IsEnabled = false;
+        }
         UpdateNumbers();
     }
     private void UpdateNumbers()
@@ -94,5 +110,34 @@ public partial class TipCalc : ContentPage
     {
         double total = Math.Round(cost * ((tipPercentage / 100) + 1), 2);
         TotalLabel.Text = total.ToString("C", CultureInfo.CreateSpecificCulture("da-DK"));
+    }
+
+    private async void ShowLCYClicked(object sender, EventArgs e)
+    {
+        string action = await DisplayActionSheet("LCY?", "Cancel", null, "DKK", "EURO", "USD");
+        double totalDKK = Math.Round(double.Parse(UserInput.Text) * ((Math.Round(MyTipSlider.Value, 0) / 100)+1), 2);
+
+        double DKKPerUSD = 6.9;
+        double DKKPerEURO = 7.45;
+        double DKKPerDKK = 1;
+
+        double total = 0;
+        string TotalToWrite = "";
+        switch (action)
+        {
+            case "DKK":
+                total = totalDKK / DKKPerDKK;
+                TotalToWrite = total.ToString("C", CultureInfo.CreateSpecificCulture("da-DK"));
+                break;
+            case "EURO":
+                total = totalDKK / DKKPerEURO;
+                TotalToWrite = total.ToString("C", CultureInfo.CreateSpecificCulture("de-DE"));
+                break;
+            case "USD":
+                total = totalDKK / DKKPerUSD;
+                TotalToWrite = total.ToString("C", CultureInfo.CreateSpecificCulture("en-US"));
+                break;
+        }
+        await DisplayAlert("Local Currency", $"{action}: {TotalToWrite}", "Ok");
     }
 }
