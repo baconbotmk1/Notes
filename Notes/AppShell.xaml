@@ -4,14 +4,20 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:views="clr-namespace:Notes.Views"
-    Shell.FlyoutBehavior="Flyout">
+    Shell.FlyoutBehavior="Disabled">
 
-        <ShellContent
+    <TabBar>
+        <ShellContent ContentTemplate="{DataTemplate views:AboutPage}" Title="About" Icon="icon_about.png"/>
+        <ShellContent ContentTemplate="{DataTemplate views:TipCalc}" Title="Tips" Icon="tips.png" />
+        <ShellContent ContentTemplate="{DataTemplate views:Calculator}" Title="Calc" Icon="calc.png" />
+    </TabBar>
+
+    <!--<ShellContent
             Title="Notes"
             ContentTemplate="{DataTemplate views:AllNotesPage}"
             Icon="{OnPlatform 'icon_notes.png', iOS='icon_notes_ios.png', MacCatalyst='icon_notes_ios.png'}" />
 
-        <ShellContent
+    <ShellContent
             Title="About"
             ContentTemplate="{DataTemplate views:AboutPage}"
             Icon="{OnPlatform 'icon_about.png', iOS='icon_about_ios.png', MacCatalyst='icon_about_ios.png'}" />
@@ -28,6 +34,6 @@
     <ShellContent
                 Title="Calculator"
                 ContentTemplate="{DataTemplate views:Calculator}"
-                Icon="{OnPlatform 'calc.png', iOS='calc.png', MacCatalyst='calc.png'}" />
+                Icon="{OnPlatform 'calc.png', iOS='calc.png', MacCatalyst='calc.png'}" />-->
 
 </Shell>
