@@ -14,4 +14,13 @@ public partial class AboutPage : ContentPage
             await Launcher.Default.OpenAsync(about.MoreInfoUrl);
         }
     }
+    private async void TipSwitch_Clicked(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new TipCalc());
+    }
+
+    private async void ToolbarItem_Clicked(object sender, EventArgs e)
+    {
+        await Navigation.PushModalAsync(new Calculator());
+    }
 }

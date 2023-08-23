@@ -1,4 +1,6 @@
-﻿namespace Notes
+﻿using Notes.Views;
+
+namespace Notes
 {
     public partial class App : Application
     {
@@ -6,7 +8,8 @@
         {
             InitializeComponent();
 
-            MainPage = new AppShell();
+            //MainPage = new AppShell();
+            MainPage = new NavigationPage(new AboutPage());
         }
     }
 }

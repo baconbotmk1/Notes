@@ -10,7 +10,7 @@
         <!--#endregion-->
 
         <!--#region Row 2-->
-        <Button Text="C"  FontSize="40" Grid.Column="0" Grid.Row="2" CornerRadius="0" BackgroundColor="LightGray" TextColor="Gray"/>
+        <Button Text="C"  FontSize="40" Grid.Column="0" Grid.Row="2" CornerRadius="0" BackgroundColor="LightGray" TextColor="Gray" Clicked="Button_Clicked"/>
         <Button Text="+/-" FontSize="40" Grid.Column="1" Grid.Row="2" CornerRadius="0" BackgroundColor="LightGray" TextColor="Gray"/>
         <Button Text="%" FontSize="40" Grid.Column="2" Grid.Row="2" CornerRadius="0" BackgroundColor="LightGray" TextColor="Gray"/>
         <Button Text="div" FontSize="40" Grid.Column="3" Grid.Row="2" CornerRadius="0" BackgroundColor="Orange" TextColor="White"/>

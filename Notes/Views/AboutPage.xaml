@@ -3,6 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:models="clr-namespace:Notes.Models"
              x:Class="Notes.Views.AboutPage">
+    
+    
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Calculator" Clicked="ToolbarItem_Clicked"/>
+    </ContentPage.ToolbarItems>
+    
+    
     <ContentPage.BindingContext>
         <models:About />
     </ContentPage.BindingContext>
@@ -17,6 +24,9 @@
 
         <Label Text="{Binding Message}" />
         <Button Text="Learn more..." Clicked="LearnMore_Clicked" />
+        
+        <Button Text="Change To Tip" Clicked="TipSwitch_Clicked" />
+        
     </VerticalStackLayout>
 
 </ContentPage>
