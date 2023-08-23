@@ -5,9 +5,9 @@
              x:Class="Notes.Views.AboutPage">
     
     
-    <ContentPage.ToolbarItems>
+    <!--<ContentPage.ToolbarItems>
         <ToolbarItem Text="Calculator" Clicked="ToolbarItem_Clicked"/>
-    </ContentPage.ToolbarItems>
+    </ContentPage.ToolbarItems>-->
     
     
     <ContentPage.BindingContext>
@@ -25,7 +25,7 @@
         <Label Text="{Binding Message}" />
         <Button Text="Learn more..." Clicked="LearnMore_Clicked" />
         
-        <Button Text="Change To Tip" Clicked="TipSwitch_Clicked" />
+        <!--<Button Text="Change To Tip" Clicked="TipSwitch_Clicked" />-->
         
     </VerticalStackLayout>
 

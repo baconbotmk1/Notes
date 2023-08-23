@@ -8,8 +8,8 @@ namespace Notes
         {
             InitializeComponent();
 
-            //MainPage = new AppShell();
-            MainPage = new NavigationPage(new AboutPage());
+            MainPage = new AppShell();
+            //MainPage = new NavigationPage(new AboutPage());
         }
     }
 }
