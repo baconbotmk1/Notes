@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Notes.Views.RotaryText"
+             Title="RotaryText">
+    <Grid RowDefinitions="100,50,auto,*" Margin="50, 0">
+        <Slider Grid.Row="0" x:Name="rotation_slider" Minimum="0" Maximum="360"/>
+        <Label Grid.Row="1" x:Name="rotation_angle" BindingContext="{x:Reference rotation_slider}" Text="{Binding Value, StringFormat='Angle = {0}°'}"/>
+        <Entry Grid.Row="2" x:Name="rotation_entry" BindingContext="{x:Reference rotation_slider}" Text="{Binding Value}" Keyboard="Numeric"/>
+        <Label Grid.Row="3" x:Name="rotation_text" BindingContext="{x:Reference rotation_slider}" Rotation="{Binding Value}" Text="{Binding Value, StringFormat='Rotation angle = {0}°'}" HorizontalOptions="Center" VerticalOptions="Center"/>
+
+
+    </Grid>
+</ContentPage>

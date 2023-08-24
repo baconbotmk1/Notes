@@ -56,6 +56,7 @@
 	  <None Remove="Resources\Images\icon_notes.png" />
 	  <None Remove="Resources\Images\icon_notes_ios.png" />
 	  <None Remove="Resources\Images\quest_tp.png" />
+	  <None Remove="Resources\Images\slope.png" />
 	  <None Remove="Resources\Images\Tips.png" />
 	</ItemGroup>
 
@@ -83,6 +84,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\NotePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\RotaryText.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\TipCalc.xaml">
