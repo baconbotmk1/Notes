@@ -86,6 +86,9 @@
 	  <MauiXaml Update="Views\NotePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Views\Restaurants.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\RotaryText.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

@@ -35,10 +35,15 @@
                 Title="Calculator"
                 ContentTemplate="{DataTemplate views:Calculator}"
                 Icon="{OnPlatform 'calc.png', iOS='calc.png', MacCatalyst='calc.png'}" />
-    
+
     <ShellContent
             Title="Rotation"
             ContentTemplate="{DataTemplate views:RotaryText}"
+            Icon="{OnPlatform 'slope.png', iOS='slope.png', MacCatalyst='slope.png'}" />
+    
+    <ShellContent
+            Title="Restaurants"
+            ContentTemplate="{DataTemplate views:Restaurants}"
             Icon="{OnPlatform 'slope.png', iOS='slope.png', MacCatalyst='slope.png'}" />
 
 </Shell>
