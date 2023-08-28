@@ -14,10 +14,10 @@
         <Label x:Name="TipLabel" HorizontalOptions="Start" Grid.Column="1" Grid.Row="1" Text="{Binding Tip}"/>
 
         <Label Text="Total" HorizontalOptions="Center" WidthRequest="100" Grid.Column="0" Grid.Row="2"/>
-        <Label x:Name="TotalLabel" HorizontalOptions="Start" Grid.Column="1" Grid.Row="2" Text="{Binding Total}"/>
+        <Label x:Name="TotalLabel" HorizontalOptions="Start" Grid.Column="1" Grid.Row="2" Text="{Binding Total, StringFormat='{0:C}'"/>
 
         <Label Text="Tip percentage" HorizontalOptions="Start" WidthRequest="100" Grid.Column="0" Grid.Row="3" VerticalOptions="End"/>
-        <Label HorizontalOptions="End" Grid.Column="1" Grid.Row="3" VerticalOptions="End" Text="{Binding TipPercent}"/>
+        <Label HorizontalOptions="End" Grid.Column="1" Grid.Row="3" VerticalOptions="End" Text="{Binding TipPercent, StringFormat='{0}%'}"/>
 
         <Slider x:Name="MyTipSlider" Minimum="0" Maximum="100" ValueChanged="OnSliderValueChanged" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="4" Value="{Binding TipPercent}"/>
 

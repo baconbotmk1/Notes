@@ -11,10 +11,15 @@
         <ToolbarItem Clicked="AddRestClicked" Text="Add" />
         <ToolbarItem Clicked="DelRestClicked" Text="Del"/>
     </ContentPage.ToolbarItems>
+
+    <ContentPage.Resources>
+        <Color x:Key="bgRestaurants">#c0c0c0</Color>
+    </ContentPage.Resources>
+    
     <CollectionView ItemsSource="{Binding AllRestaurants}" SelectionMode="None">
         <CollectionView.ItemTemplate>
             <DataTemplate >
-                <Frame HasShadow="True" HeightRequest="125" Margin="15" BackgroundColor="#CEF0C6">
+                <Frame HasShadow="True" HeightRequest="125" Margin="15" BackgroundColor="{StaticResource bgRestaurants}">
                     <Grid Padding="0" ColumnDefinitions="125,*" x:DataType="model:Restaurant">
                         <Image
                                 Aspect="AspectFit"
